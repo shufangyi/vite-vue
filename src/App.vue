@@ -1,4 +1,5 @@
 <template>
+  <div @click="$router.back()">&lt; back</div>
   <router-view v-slot="{ Component, route }">
     <keep-alive :max="10">
       <component v-if="route?.meta?.keepAlive" :is="Component" :key="route.fullPath" />

@@ -1,4 +1,4 @@
 <template>
   article
-  <router-view></router-view>
+  <router-view v-bind="$attrs" />
 </template>

@@ -1,17 +1,26 @@
 <template>
-  <div @click="$router.back()">&lt; back</div>
-  <router-view v-slot="{ Component, route }">
-    <keep-alive :max="10">
-      <component v-if="route?.meta?.keepAlive" :is="Component" :key="route.fullPath" />
-    </keep-alive>
-    <component v-if="!route?.meta?.keepAlive" :is="Component" :key="route.fullPath" />
-  </router-view>
+  <div>vue-i18n:{{ $t("common.title") }}</div>
+  <div @click="switchHandler">switch: click me</div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent } from "vue";
+import { useI18n } from "vue-i18n";
 
 export default defineComponent({
-  mounted() {},
-})
+  setup() {
+    const { locale } = useI18n();
+
+    function switchHandler() {
+      locale.value = locale.value === "en-US" ? "zh-CN" : "en-US";
+    }
+
+    return {
+      switchHandler,
+    };
+  },
+  mounted() {
+    console.log(this.$t("common.title"));
+  },
+});
 </script>

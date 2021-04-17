@@ -1,0 +1,55 @@
+Arguments: 
+  /Users/mrtree/.nvm/versions/node/v14.5.0/bin/node /Users/mrtree/.yarn/bin/yarn.js
+
+PATH: 
+  /Users/mrtree/Documents/execute/ffmpeg/bin:/Users/mrtree/.deno/bin:/Users/mrtree/.yarn/bin:/Users/mrtree/.config/yarn/global/node_modules/.bin:/Users/mrtree/.nvm/versions/node/v14.5.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/mrtree/Documents/execute/ffmpeg/bin:/Users/mrtree/.deno/bin:/Users/mrtree/.yarn/bin:/Users/mrtree/.config/yarn/global/node_modules/.bin:/Users/mrtree/.nvm/versions/node/v14.5.0/bin:/Users/mrtree/.cargo/bin
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  14.5.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/mrtree/Documents/daydayup/vite/vite-2-demo/package.json: Unexpected token } in JSON at position 246
+      at JSON.parse (<anonymous>)
+      at /Users/mrtree/.yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/Users/mrtree/.yarn/lib/cli.js:310:30)
+      at /Users/mrtree/.yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "vite-2-demo",
+    "version": "0.0.0",
+    "scripts": {
+      "dev": "vite",
+      "check": "vuedx-typecheck .",
+      "build": "vite build",
+      "serve": "vite preview"
+    },
+    "dependencies": {
+      "vue": "^3.0.5",
+      "vue-i18n": "^9.1.6",
+    },
+    "devDependencies": {
+      "@intlify/vite-plugin-vue-i18n": "^2.1.2",
+      "@types/node": "^14.14.31",
+      "@vitejs/plugin-vue": "^1.1.4",
+      "@vitejs/plugin-vue-jsx": "^1.1.0",
+      "@vue/compiler-sfc": "^3.0.5",
+      "@vuedx/typecheck": "^0.6.0",
+      "@vuedx/typescript-plugin-vue": "^0.6.0",
+      "typescript": "^4.1.3",
+      "vite": "^2.0.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

@@ -1,14 +1,19 @@
-import './utils/firebase'
-import { createApp } from 'vue'
-import App from './App.vue'
-import router, { setupRouter } from './router'
-import { setupStore } from './store'
+import { createApp } from "vue";
+import { createI18n } from "vue-i18n";
+import App from "./App.vue";
 
-const app = createApp(App)
+import enUS from "./locales/en-US.json";
+import zhCN from "./locales/zh-CN.json";
 
-setupRouter(app)
-setupStore(app)
+const app = createApp(App);
 
-router.isReady().then(() => {
-  app.mount('#app')
-})
+const i18n = createI18n({
+  locale: localStorage.getItem("locale") || "zh-CN",
+  messages: {
+    "en-US": enUS,
+    "zh-CN": zhCN,
+  },
+});
+
+app.use(i18n);
+app.mount("#app");
